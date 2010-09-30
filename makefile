@@ -1,0 +1,9 @@
+#CC=g++
+#CFLAGS= -lm -lX11
+LDFLAGS= -lm -lX11
+SOURCES= main.c
+OBJECTS= $(SOURCES:.c=.o)
+EXECUTABLE=smf
+
+$(EXECUTABLE): $(OBJECTS) 
+	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
